@@ -157,7 +157,7 @@ an alias to do this for you:
 
     $ pip install git+https://github.com/<user>/<package-name>.git
 
-## LEAP Pangeo Python Environment
+## Pangeo Python Environment
 
 The environment on our cloud JupyterHub is a highly curated combination of packages
 maintained by the [Pangeo Project](http://pangeo.io/).
@@ -166,139 +166,155 @@ In addition to just specifying a combination of packages, this repo automaticall
 builds [Docker containers](https://docs.docker.com/get-started/).
 
 The latest Pangeo notebook environment lives at <https://github.com/pangeo-data/pangeo-docker-images/blob/master/pangeo-notebook/environment.yml>.
-Below are the contents of that file as of 2024-09-06.
-Copy and paste the following ``environment.yml`` file somewhere
-on your local hard drive:
+Below are the contents of that file as of 2026-01-20.
 
-    name: pangeo
-    channels:
-    - conda-forge
-    - nodefaults
-    dependencies:
-    - adlfs
-    - argopy
-    - awscli
-    - black
-    - boto3
-    - bottleneck
-    - cartopy
-    - cdsapi
-    - cfgrib
-    - cf_xarray
-    - ciso
-    - cmocean
-    - contextily
-    - dask-geopandas
-    - dask-ml
-    - datashader
-    - descartes
-    - earthaccess
-    - eofs
-    - erddapy
-    - esmpy
-    - fastjmd95
-    - flox
-    - fsspec
-    - gcm_filters
-    - gcsfs
-    - gh
-    - gh-scoped-creds
-    - geocube
-    - geopandas
-    - geopy
-    - geoviews-core
-    - git-lfs
-    - gsw
-    - h5netcdf
-    - h5py
-    - holoviews
-    - hvplot
-    - intake
-    - intake-esm
-    - intake-geopandas
-    - intake-stac
-    - intake-xarray
-    - ipdb
-    - ipykernel
-    - ipyleaflet
-    - ipympl
-    - ipytree
-    - ipywidgets
-    - jupyterlab_code_formatter
-    - jupyterlab-git
-    - jupyterlab-lsp
-    - jupyterlab-myst
-    - jupyter-panel-proxy
-    - jupyter-resource-usage
-    - kerchunk
-    - line_profiler
-    - lonboard
-    - lxml
-    - lz4
-    - matplotlib-base
-    - memory_profiler
-    - metpy
-    - nb_conda_kernels
-    - nbstripout
-    - nc-time-axis
-    - netcdf4
-    - numbagg
-    - numcodecs
-    - numpy
-    - numpy_groupies
-    - odc-stac
-    - pandas
-    - panel
-    - parcels
-    - param
-    - planetary-computer
-    - pop-tools
-    - pyarrow
-    - pycamhd
-    - pydap
-    - pystac
-    - pystac-client
-    - python-blosc
-    - python-gist
-    - python-graphviz
-    - python-lsp-ruff
-    - python-xxhash
-    - rasterio
-    - rechunker
-    - rio-cogeo
-    - rioxarray
-    - ruff
-    - s3fs
-    - satpy
-    - scikit-image
-    - scikit-learn
-    - scipy
-    - seaborn
-    - sparse
-    - snakeviz
-    - stackstac
-    - tiledb-py
-    - timezonefinder
-    - watermark
-    - xarray
-    - xarrayutils
-    - xarray-datatree
-    - xarray_leaflet
-    - xarray-spatial
-    - xbatcher
-    - xclim
-    - xesmf
-    - xgboost
-    - xgcm
-    - xhistogram
-    - xmip
-    - xmitgcm
-    - xpublish
-    - xrft
-    - xskillscore
-    - xxhash
-    - xvec
-    - zarr
+
+name: pangeo
+channels:
+ - conda-forge
+ - nodefaults
+dependencies:
+ - adlfs
+ - argopy
+ - awscli
+ - black
+ - boto3
+ - bottleneck
+ - cartopy
+ - cdsapi
+ - cfgrib
+ - cf_xarray
+ - ciso
+ - cmocean
+ - contextily
+ - dask-geopandas
+ - dask-ml
+ - datashader
+ - descartes
+ - duckdb-cli
+ - earthaccess
+ - eofs
+ - erddapy
+ - esmpy
+ - fastjmd95
+ - flox
+ - fsspec
+ - gcm_filters
+ - gcsfs>=2025
+ - gdal
+ - gh
+ - gh-scoped-creds
+ - geocube
+ - geopandas
+ - geopy
+ - geoviews-core
+ - git-lfs
+ - google-cloud-sdk
+ - gsw
+ - h5netcdf
+ - h5py
+ - holoviews
+ - hvplot
+ - icechunk
+ - intake
+ # wait for zarr v3 compat - https://github.com/intake/intake-esm/issues/727
+ - intake-esm<2025.2.3
+ - intake-geopandas
+ - intake-stac
+ - intake-xarray
+ - ipdb
+ - ipykernel
+ - ipyleaflet
+ - ipympl
+ - ipytree
+ - ipywidgets
+ - jupyterlab_code_formatter
+ - jupyterlab-git
+ - jupyterlab-lsp
+ - jupyterlab-myst
+ - jupyter-panel-proxy
+ - jupyter-resource-usage
+ - jupyter-sshd-proxy
+ - kerchunk
+ - libgdal-arrow-parquet
+ - libgdal-netcdf
+ - line_profiler
+ - lonboard
+ - lxml
+ - lz4
+ - matplotlib-base
+ - memory_profiler
+ - metpy
+ - nb_conda_kernels
+ - nbstripout
+ - nc-time-axis
+ - netcdf4
+ - numbagg
+ - numcodecs
+ - numpy
+ - numpy_groupies
+ - obstore
+ - odc-stac>=0.4.0
+ - openssh
+ - pandas
+ - panel
+ # wait for zarr v3 compat - https://github.com/OceanParcels/Parcels/issues/1819
+ #- parcels
+ - param
+ - planetary-computer
+ - pop-tools
+ - pot
+ - pyarrow
+ - pycamhd
+ - pydap
+ - pystac
+ - pystac-client
+ - python-blosc
+ - python-duckdb
+ - python-gist
+ - python-graphviz
+ - python-lsp-ruff
+ - python-xxhash
+ - rasterio
+ - rclone
+ - rechunker
+ - rio-cogeo
+ - rioxarray
+ - ruff
+ - s3fs
+ - satpy
+ - scikit-image
+ - scikit-learn
+ - scipy
+ - seaborn
+ - sparse
+ - snakeviz
+ - stackstac
+ - tiledb-py
+ - timezonefinder
+ - virtualizarr
+ - watermark
+ - xarray
+ - xarrayutils
+ - xarray_leaflet
+ - xarray-spatial
+ - xbatcher
+ # https://github.com/conda-forge/xcape-feedstock/pull/22
+ #- xcape
+ - xclim
+ - xesmf
+ - xgboost
+ - xgcm
+ - xhistogram
+ - xmip
+ - xmitgcm
+ - xpublish
+ - xrft
+ - xskillscore
+ - xxhash
+ - xvec
+ - zarr>=3.0.8
+
 
 With this environment file, a new environment with the exact
 configuration can be installed in another server by executing
