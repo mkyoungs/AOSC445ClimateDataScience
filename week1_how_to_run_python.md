@@ -217,7 +217,6 @@ dependencies:
  - hvplot
  - icechunk
  - intake
- # wait for zarr v3 compat - https://github.com/intake/intake-esm/issues/727
  - intake-esm<2025.2.3
  - intake-geopandas
  - intake-stac
@@ -258,8 +257,6 @@ dependencies:
  - openssh
  - pandas
  - panel
- # wait for zarr v3 compat - https://github.com/OceanParcels/Parcels/issues/1819
- #- parcels
  - param
  - planetary-computer
  - pop-tools
@@ -299,8 +296,6 @@ dependencies:
  - xarray_leaflet
  - xarray-spatial
  - xbatcher
- # https://github.com/conda-forge/xcape-feedstock/pull/22
- #- xcape
  - xclim
  - xesmf
  - xgboost
@@ -368,7 +363,7 @@ If you are interested, you can [speed things up with Mamba](https://earth-env-da
 7. You can download the course materials with the following link: 
 
 ~~~
-   
+   https://umd.cloudbank.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fmkyoungs%2FAOSC445ClimateDataScience&urlpath=lab%2Ftree%2FAOSC445ClimateDataScience%2F&branch=main
 ~~~
 
    More on `git` commands later.
