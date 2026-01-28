@@ -2,7 +2,7 @@
 
 An introduction of different ways to run Python code, installing and managing Python with Conda, and running Python with JupyterHub.
 
-*The notes below are adapted from our [textbook](https://earth-env-data-science.github.io/lectures/environment/python_environments.html#) and [Pythia Foundations](https://foundations.projectpythia.org/foundations/getting-started-python.html#).*
+*The notes below are adapted from our [textbook](https://earth-env-data-science.github.io/lectures/environment/python_environments.html#) and [Pythia Foundations](https://foundations.projectpythia.org/foundations/getting-started-python/).*
 
 ---
 
