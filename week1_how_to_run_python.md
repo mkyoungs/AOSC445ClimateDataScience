@@ -364,7 +364,6 @@ If you are interested, you can [speed things up with Mamba](https://earth-env-da
    https://umd.cloudbank.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fmkyoungs%2FAOSC445ClimateDataScience&urlpath=lab%2Ftree%2FAOSC445ClimateDataScience%2F&branch=main
 ~~~
 
-   More on `git` commands later.
 
 ## More on Jupyter 
 
