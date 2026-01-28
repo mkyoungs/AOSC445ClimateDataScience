@@ -332,8 +332,6 @@ If you are interested, you can [speed things up with Mamba](https://earth-env-da
    
    You can do this in the GUI left sidebar by clicking the new-folder icon. If you prefer to use the command line, you can access a terminal by clicking the icon under the "Other" heading in the Launcher.
 
-![Jupyter GUI](images/jupyter_gui.png)
-
 2. Create a new `mysci.ipynb` file within the `work` folder:
 
    Do this in the GUI on the left sidebar by clicking the "+" icon.
